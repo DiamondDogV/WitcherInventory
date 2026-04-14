@@ -35,6 +35,10 @@ namespace WitcherInventory.Entities
             get { return _damageType; }
         }
 
+        public override string Use()
+        {
+            return Attack();
+        }
         // Атака оружием
         public virtual string Attack()
         {

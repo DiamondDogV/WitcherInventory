@@ -35,6 +35,7 @@
             this.PotionButton = new System.Windows.Forms.Button();
             this.ArmorButton = new System.Windows.Forms.Button();
             this.TextBoxLog = new System.Windows.Forms.TextBox();
+            this.LabelWeight = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -128,6 +129,18 @@
             this.TextBoxLog.Size = new System.Drawing.Size(371, 549);
             this.TextBoxLog.TabIndex = 5;
             // 
+            // LabelWeight
+            // 
+            this.LabelWeight.AutoSize = true;
+            this.LabelWeight.BackColor = System.Drawing.Color.Transparent;
+            this.LabelWeight.Font = new System.Drawing.Font("Consolas", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.LabelWeight.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.LabelWeight.Location = new System.Drawing.Point(1990, 1278);
+            this.LabelWeight.Name = "LabelWeight";
+            this.LabelWeight.Size = new System.Drawing.Size(328, 47);
+            this.LabelWeight.TabIndex = 6;
+            this.LabelWeight.Text = "Total Weight: ";
+            // 
             // WitcherInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -135,6 +148,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2538, 1384);
+            this.Controls.Add(this.LabelWeight);
             this.Controls.Add(this.TextBoxLog);
             this.Controls.Add(this.ArmorButton);
             this.Controls.Add(this.PotionButton);
@@ -143,7 +157,7 @@
             this.Controls.Add(this.listBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WitcherInventory";
-            this.Text = "Form1";
+            this.Text = "Witcher Inventory";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -159,6 +173,7 @@
         private System.Windows.Forms.Button PotionButton;
         private System.Windows.Forms.Button ArmorButton;
         private System.Windows.Forms.TextBox TextBoxLog;
+        private System.Windows.Forms.Label LabelWeight;
     }
 }
 

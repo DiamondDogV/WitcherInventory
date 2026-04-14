@@ -18,7 +18,7 @@ namespace WitcherInventory.Entities
             : base(name, weight, cost)
         {
             if (_count > _maxCount)
-                throw new ArgumentException($"Нельзя иметь больше {_maxCount} зелий этого типа");
+                count = _maxCount;
             _count = count;
         }
 
@@ -37,6 +37,10 @@ namespace WitcherInventory.Entities
             }
         }
 
+        public override string Use()
+        {
+            return Drink();
+        }
         // Выпить зелье
         public string Drink()
         {
@@ -47,7 +51,7 @@ namespace WitcherInventory.Entities
             }
             else
             {
-                throw new InvalidOperationException("Нет зелья");
+                return "Нет зелья";
             }
             string effect = PotionEffect();
             return effect;

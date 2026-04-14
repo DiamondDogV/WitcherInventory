@@ -39,7 +39,11 @@ namespace WitcherInventory.Entities
         public double Weight
         {
             get { return _weight; }
-            set { _weight = value; }
+            set {
+                if (value < 0)
+                    throw new ArgumentException("Вес не может быть отрицательным");
+                _weight = value;
+            }
         }
         public int Cost
         {
@@ -61,6 +65,11 @@ namespace WitcherInventory.Entities
         public virtual double TotalWeight
         {
             get { return _weight; }
+        }
+
+        public virtual string Use()
+        {
+            return $"Вы использовали {Name}";
         }
 
         public abstract string GetDisplayText();
