@@ -46,12 +46,16 @@ namespace WitcherInventory.Entities
             set { _protection = value; }
         }
 
+        public override string Use()
+        {
+            return Fix();
+        }
         //Починка
         public string Fix()
         {
             if (!IsBroken)
             {
-                throw new InvalidOperationException("Броня не нуждается в починке");
+                return "Броня не нуждается в починке";
             }
             Durability = 100;
             Protection *= 2;

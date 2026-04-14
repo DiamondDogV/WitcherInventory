@@ -18,7 +18,7 @@ namespace WitcherInventory.Entities
             : base(name, weight, cost, damage, damageType)
         {
             if (count > _maxCount)
-                throw new ArgumentException($"Нельзя иметь больше {_maxCount} бомб этого типа");
+                count = _maxCount;
             _count = count;
         }
 
@@ -39,7 +39,7 @@ namespace WitcherInventory.Entities
         public override string Attack()
         {
             if (Count == 0)
-                throw new InvalidOperationException("Нет бомб");
+                return "Нет бомб данного вида";
             Count--;
 
             return $"Было нанесено {Damage} единиц {DamageTypeToString(DamageTypeMethod)} урона";
